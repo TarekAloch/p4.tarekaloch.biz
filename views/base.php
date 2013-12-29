@@ -20,9 +20,19 @@
     <hr/>
     <p>Find someone to play with and add their email!</p>
     <div class="container_12" id="main-content">
+        <? $t->block('content'); ?>
+        <? $t->endblock(true); ?>
     </div>
     <hr/>
+    <? $t->block('footer'); ?>
+    <? $t->endblock(true); ?>
     
-   
+    <script>
+        $(document).data('view_data', <?= json_encode($this->_get_view_data($data)); ?>);
+    </script>
+    <? foreach ($this->_scripts as $script): ?>
+        <script src="<?=$script?>"></script>
+    <? endforeach; ?>
+
 </body>
 </html>
