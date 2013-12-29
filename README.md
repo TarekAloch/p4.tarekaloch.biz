@@ -34,5 +34,8 @@ Additional info:
 	To simulate two player sessions, create a new game in one browser window and then open another browser in "incognito" or "private browsing" mode and log in as the invited player. 
 	This will allow you to play against yourself to simulate the multi-player interaction.
 
+	* Note: 
+		Inline scripts are used by this webapp but only in places where it is necessary to generate 
+		and output dynamic content such as game data etc. The base layout contains all externalized resources.
 
 
