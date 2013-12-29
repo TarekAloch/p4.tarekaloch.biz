@@ -15,12 +15,19 @@ Features:
 
 	- Turn based gameplay
 
+	- Simple, mobile friendly ui that is highly cross-browser compatable
+
 	- Dictionary based backend word validation
 
 	- Ability to delete and create new sessions
 
 	- Ability to Auto-resume running game sessions
 
+
+Components managed by javascript:
+
+	In this game, the client-side score-keeping and display is managed by javascript.
+	The javascript keeps track of scores and the state of the board via html5 "data-" attributes.
 
 Additional info:
 
