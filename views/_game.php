@@ -34,7 +34,7 @@ $scores = $game->get_scores();
 		<? endif; ?>
 	<? endif; ?>
 
-	<p name="score">Score:
+	<p id="score">Score:
 		<? echo spf(($scores['winning'] == 'you') ? '<strong>You (%s)</strong>' : 'You (%s)', $scores['you']) ?>,
 		<? echo spf(($scores['winning'] == 'them') ? '<strong>Them (%s)</strong>' : 'Them (%s)', $scores['them']) ?>
 	</p>
@@ -44,7 +44,7 @@ $scores = $game->get_scores();
 		<p class="letters">Your word: <span id="word_<?=$game->id?>"></span></p>
 	<? endif; ?>
 
-	<div class="game_div <?=$game_active ? 'enabled' : 'disabled'?>" game-id="<?=$game->id?>" my-score="<?=hsc($scores['you'])?>" their-score="<?=hsc($scores['them'])?>">
+	<div class="game_div <?=$game_active ? 'enabled' : 'disabled'?>" data-game-id="<?=$game->id?>" data-my-score="<?=hsc($scores['you'])?>" data-their-score="<?=hsc($scores['them'])?>">
 		<table>
 			<tr>
 				<?php
@@ -58,7 +58,7 @@ $scores = $game->get_scores();
 					$class .= $game->is_tile_locked($i) ? ' locked' : '';
 					// figure out the deltas of each person's score when this tile is played
 					$deltas = $game->get_tile_deltas($i);
-					echo spf('<td class="%s" data-coord="%d" delta-me="%d" delta-them="%d">%s</td>', $class, hsc($i), $deltas['me'], $deltas['them'], hsc($letter));
+					echo spf('<td class="%s" data-coord="%d" data-delta-me="%d" data-delta-them="%d">%s</td>', $class, hsc($i), $deltas['me'], $deltas['them'], hsc($letter));
 				}
 				?>
 			</tr>

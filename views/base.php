@@ -7,25 +7,21 @@
     <meta charset="utf-8">
 
     <title><? $t->block('title'); ?>WordBlocks v1<? $t->endblock(true); ?></title>
-    <meta name="description" content="">
+    <meta name="description" content="A word game to play with friends!">
     <meta name="viewport" content="width=device-width, user-scalable=no">
-    <meta name="viewport" content="width=500, initial-scale=1">
     <? $t->block('meta'); ?>
     <? $t->endblock(true); ?>
 
-    <meta http-equiv="refresh" content="100;">
-
-    
-<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
-<link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700' rel='stylesheet' type='text/css' />
+<meta http-equiv="refresh" content="100">
+<link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css" />
+<link href="http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" href="/public/assets/css/normalize.css" />
 <link rel="stylesheet" href="/public/assets/css/main.css">
 <script src="/public/assets/js/libs/jquery-1.7.2.min.js"></script>
 <script src="/public/assets/js/libs/jquery-ui.min.js"></script>
 </head>
 <body>
-
-    <h2>WordBlocks</h2>
+    <a class="logo-link" href="/"><h2>WordBlocks</h2></a>
     <hr/>
     <p>Find someone to play with and add their email!</p>
     <div class="container_12" id="main-content">

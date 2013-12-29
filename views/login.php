@@ -7,8 +7,8 @@
       <?=csrf::html_tag()?>
       <label for="email">Enter your email to get started:
         <input type="text" id="email" name="email" size="30" />
-        <input type="submit" id="btn_submit" name="btn_submit" value="Get Started!" />
       </label>
+      <input type="submit" id="btn_submit" name="btn_submit" value="Get Started!" />
     </form>
 
 <? $t->endblock(); ?>

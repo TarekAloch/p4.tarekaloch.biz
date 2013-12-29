@@ -19,20 +19,20 @@
 
 	// initialize scores
 	$('div.game_div').each(function(i, div) {
-		var gid = parseInt($(div).attr('game-id'));
-		my_score[gid] = parseInt($(div).attr('my-score'));
-		their_score[gid] = parseInt($(div).attr('their-score'));
+		var gid = parseInt($(div).attr('data-game-id'));
+		my_score[gid] = parseInt($(div).attr('data-my-score'));
+		their_score[gid] = parseInt($(div).attr('data-their-score'));
 	});
 
 	$('div.enabled td').on('click', function(el) {
 		var td = $(this);
-		var gid = parseInt(td.parents('div.game_div').attr('game-id'));
+		var gid = parseInt(td.parents('div.game_div').attr('data-game-id'));
 
 		var coords = all_coords[gid] || [];
 		var letters = all_letters[gid] || {};
 
 		var coord = td.attr('data-coord');
-		console.log(coords)
+		console.log(coords);
 		var coord_index = $.inArray(coord, coords); // IE < 9 compliant
 		if (coord_index != -1) {
 			// letter already chosen
@@ -56,8 +56,8 @@
 
 	function update_scores(gid, td, direction) {
 		if ($('#scores')) {
-			my_score[gid] += direction * parseInt(td.attr('delta-me'));
-			their_score[gid] += direction * parseInt(td.attr('delta-them'));
+			my_score[gid] += direction * parseInt(td.attr('data-delta-me'));
+			their_score[gid] += direction * parseInt(td.attr('data-delta-them'));
 		}
 
 		var html = "Score: ";
@@ -71,7 +71,7 @@
 		str = "Them (" + their_score[gid] + ")";
 		html += (my_score[gid] < their_score[gid]) ? ("<strong>" + str + "</strong>") : str;
 
-		td.parents('div.game_div').siblings('p[name="score"]').html(html);
+		td.parents('div.game_div').siblings('p[id="score"]').html(html);
 	}
 
 	// delete warning
