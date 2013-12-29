@@ -1,0 +1,9 @@
+Dear {player2},
+
+{player1} just played a move on WordBlocks!
+
+Resume your game here:
+{game_url}
+
+Have fun!
+The folks @WordBlocks

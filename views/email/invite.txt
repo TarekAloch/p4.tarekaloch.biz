@@ -1,0 +1,11 @@
+Dear {player2},
+
+{player1} invited you to a game of WordBlocks!
+
+This is a game that improves your word building skills.
+
+Here is where you can get started:
+{game_url}/login/{player2}
+
+Have fun!
+- The folks at wordblocks
